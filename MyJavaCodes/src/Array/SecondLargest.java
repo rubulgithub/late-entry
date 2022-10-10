@@ -22,7 +22,12 @@ public class SecondLargest
         for(int i=0;i<6;i++)
         {
             if(r[i]!=max)
-            result=r[i];
+            {
+                if(result==-1)
+                result=r[i];
+                else if(r[i]>r[result])
+                result=r[i];
+            }
         }
         System.out.println("The Second Largest Array Element is :" +result);
 
