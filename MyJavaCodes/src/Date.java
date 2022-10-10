@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 
 
-public class Date
+class date
 {
   static List<String> days = Arrays.asList("SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY") ;
   public static String getDay(String day, String month, String year)
@@ -21,10 +21,10 @@ public class Date
       int p=c.get(Calendar.DAY_OF_WEEK);
       String s=days.get(p-1);
       return s;
+      
 
 
   }
-
  public static void main(String []args)
  {
     Scanner in=new Scanner(System.in);
@@ -35,6 +35,6 @@ public class Date
     System.out.println("Enter year : ");
     String year=in.next();
     System.out.println(getDay(day,month,year));
+ }
 
  }   
-}
