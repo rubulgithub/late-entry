@@ -18,7 +18,7 @@ public class SecondSmallest
             min=arr[i];
         }
         int result=-1;
-        for(int i=0;i<6;i++)
+        for(int i=0;i<5;i++)
         {
             if(min!=arr[i])
             {
