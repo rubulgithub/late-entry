@@ -1,16 +1,16 @@
 package LinkList;
 
-class Node 
+class Node
 {
     int data;
     Node next;
 }
-class LLs
+class A
 {
     Node head;
-    public void Insert(int data)
+    public void NON(int data)
     {
-        Node newNode= new Node();
+        Node newNode=new Node();
         newNode.data=data;
         newNode.next=null;
         if(head==null)
@@ -26,27 +26,35 @@ class LLs
             }
             temp.next=newNode;
         }
+
     }
     public void show()
     {
+        int count=0;
         Node newNode=head;
         while(newNode.next!=null)
         {
-            System.out.println(newNode.data);
+            count++;
+            System.out.println(+newNode.data);
             newNode=newNode.next;
         }
-        System.out.println(newNode.data);
+        count++;
+        System.out.println(+newNode.data);
+        System.out.println("Number of Nodes : "+count);
     }
 }
 
-public class Insertion 
+public class NumberOfNodes
 {
     public static void main(String []args)
     {
-        LLs list=new LLs();
-        list.Insert(1);
-        list.Insert(2);
-        list.Insert(2);
-        list.show();
-    }
+        A obj=new A();
+        obj.NON(2);
+        obj.NON(3);
+        obj.NON(4);
+        obj.NON(5);
+        obj.NON(6);
+        obj.show();
+        
+    }   
 }
