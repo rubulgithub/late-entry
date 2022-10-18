@@ -1,4 +1,3 @@
-package LinkList;
 
 class Node
 {
