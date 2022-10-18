@@ -23,7 +23,7 @@ class LLs
             {
                 temp=temp.next;
             }
-            temp.next=node;
+            temp.next=node; 
 
         }
     }
@@ -44,7 +44,7 @@ class LLs
         node.next=null;
 
         Node temp=head;
-        for(int i=0;i<index-1;i++)
+        for(int i=0;i<index-2;i++)
         {
             temp=temp.next;
         }

@@ -22,7 +22,8 @@ class Stack
         {
             top=newNode;
         }
-        else{
+        else
+        {
             newNode.next=top;
             top=newNode;
         }

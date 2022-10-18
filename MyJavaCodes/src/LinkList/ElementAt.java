@@ -1,70 +1,49 @@
-package LinkList;
-
-class Node
-{
+class Node {
     int data;
     Node next;
+    Node(int d)
+    {
+        data = d;
+        next = null;
+    }
 }
-class A
+ 
+class ElementAt
 {
     Node head;
-    public void Element(int data)
+    public int GetNth(int index)
     {
-        Node newNode=new Node();
-        newNode.data=data;
-        newNode.next=null;
-        if(head==null)
+        Node temp = head;
+        int count = 1;
+        while (temp != null)
         {
-            head=newNode;
+            if (count == index)
+                return temp.data;
+            count++;
+            temp = temp.next;
         }
-        Node temp=head;
-        while(temp.next!=null)
-        {
-            temp=temp.next;
-        }
-        temp.next=newNode;
+        return 0;
     }
-    public void Nth(int index)
+    public void push(int new_data)
     {
-        Node temp=head;
-        int count=0;
-        while(temp.next!=null)
-        {
-            if(count==index)
-                System.out.println("n : "+temp.data);
-                count++;
-            temp=temp.next;
-        }
-        System.out.println("node is not found :  ");
-
-    }
-    public void show()
-    {
-        Node newNode=head;
-        while(newNode.next!=null)
-        {
-            System.out.println(newNode.data);
-            newNode=newNode.next;
-        }
-        System.out.println(newNode.data);
+        Node new_Node = new Node(new_data);
+        new_Node.next = head;
+        head = new_Node;
     }
 
-
+    public static void main(String[] args)
+    {
+        ElementAt llist = new ElementAt();
+ 
+    
+        llist.push(1);
+        llist.push(4);
+        llist.push(1);
+        llist.push(12);
+        llist.push(1);
+ 
+        System.out.println("Element at index 4 is "
+                           + llist.GetNth(6));
+    }
 }
 
-public class ElementAt
-{
-    public static void main(String []args)
-    {
-        A list=new A();
-        list.Element(2);
-        list.Element(5);
-        list.Element(3);
-        list.Element(6);
-        list.Element(8);
-
-        list.Nth(2);
-        
-        list.show();
-    }   
-}
