@@ -43,7 +43,7 @@ public class InsertAtMiddle
             }
         int count=((len%2)==0)?len/2:((len+1)/2);
         temp=head;
-        while(count-->1)
+        for(int i=0;i<count-1;i++)
         {
         temp=temp.next;
         }
