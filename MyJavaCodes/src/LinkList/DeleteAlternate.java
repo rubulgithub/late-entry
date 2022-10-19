@@ -53,7 +53,7 @@ public class DeleteAlternate
         L1.Create(5);
         L1.Create(6);
         L1.show();
-        
+        System.out.println("Updated linked List : "+L1.DeleteAlt());
 
     }
 }
