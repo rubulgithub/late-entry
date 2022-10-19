@@ -69,6 +69,7 @@ public class InsertAtMiddle
         list.Create(2);
         list.Create(3);
         list.Create(4);
+        list.Create(5);
         list.pushAtMiddle(1);
         list.show();
     }
