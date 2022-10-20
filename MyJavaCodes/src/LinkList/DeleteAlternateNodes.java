@@ -4,7 +4,7 @@ class Node
     Node next;
 }
 
-public class DeleteAlternate
+public class DeleteAlternateNodes
 {
     Node head;
     public void Create(int data)
@@ -24,7 +24,7 @@ public class DeleteAlternate
             temp.next=newNode;
         }
     }
-    public int DeleteAlt()
+    public Node DeleteAlt()
     {
         Node temp=head;
         while(temp!=null&&temp.next!=null)
@@ -32,7 +32,7 @@ public class DeleteAlternate
             temp.next=temp.next.next;
             temp=temp.next;
         }
-        return temp.data;
+        return head;
     }
     public void show()
     {
@@ -46,7 +46,7 @@ public class DeleteAlternate
     }
     public static void main(String []args)
     {
-        DeleteAlternate L1=new DeleteAlternate();
+        DeleteAlternateNodes L1=new DeleteAlternateNodes();
         L1.Create(1);
         L1.Create(2);
         L1.Create(3);
@@ -54,7 +54,10 @@ public class DeleteAlternate
         L1.Create(5);
         L1.Create(6);
         L1.show();
-        System.out.println("Updated linked List : "+L1.DeleteAlt());
-
+       
+        L1.DeleteAlt();
+  
+        System.out.println("Linked List after calling ");
+        L1.show();
     }
 }
