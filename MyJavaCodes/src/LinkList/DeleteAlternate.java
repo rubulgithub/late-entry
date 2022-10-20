@@ -24,7 +24,7 @@ public class DeleteAlternate
             temp.next=newNode;
         }
     }
-    public void DeleteAlt()
+    public int DeleteAlt()
     {
         Node temp=head;
         while(temp!=null&&temp.next!=null)
@@ -32,6 +32,7 @@ public class DeleteAlternate
             temp.next=temp.next.next;
             temp=temp.next;
         }
+        return temp.data;
     }
     public void show()
     {
