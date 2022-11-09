@@ -5,7 +5,7 @@ import java.util.Scanner;
 class Search
 {
     public void Seq_Search()
-    {
+    { 
         int flag=1;
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the Array Element : ");
